@@ -1,0 +1,83 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  background: url("stars.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  color: white;
+  min-height: 100%;
+}
+.main {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 5vmin;
+}
+.naptune,
+.uranus,
+.saturn,
+.jupiter,
+.mars,
+.earth,
+.venus,
+.mercury {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  border-radius: 50%;
+  border: 0.2vmin solid white;
+}
+
+/* Planet orbits using vmin for responsive scaling */
+.naptune { height: 90vmin; width: 90vmin; animation: rotate 20s linear infinite;}
+.uranus  { height: 80vmin; width: 80vmin; }
+.saturn  { height: 70vmin; width: 70vmin; }
+.jupiter { height: 60vmin; width: 60vmin; }
+.mars    { height: 50vmin; width: 50vmin; }
+.earth   { height: 40vmin; width: 40vmin; }
+.venus   { height: 30vmin; width: 30vmin; }
+.mercury { height: 20vmin; width: 20vmin; }
+
+.naptune1,
+.uranus1,
+.saturn1,
+.jupiter1,
+.mars1,
+.earth1,
+.venus1,
+.mercury1 {
+  position: absolute;
+  height: 6vmin;
+  width: 6vmin;
+  animation: rotate 4s linear infinite;
+}
+
+/* Adjust individual planet positions */
+.naptune1  { top: -4%; }
+.uranus1   { right: -4.2%; }
+.saturn1   { left: -5.6%; width: 8vmin; height: 8vmin; }
+.jupiter1  { left: 36%; top: -5%; }
+.mars1     { top: 93.5%; }
+.earth1    { left: 92.3%; }
+.venus1    { right: 88.5%; }
+.mercury1  { top: 80%; width: 5.5vmin; height: 5.5vmin; }
+
+.sun {
+  height: 10vmin;
+  width: 10vmin;
+  background: url("sun.png");
+  background-position: center;
+  background-size: cover;
+  animation: rotate 4s linear infinite;
+}
+
+@keyframes rotate {
+  100% {
+    transform: rotate(360deg);
+  }
+}
